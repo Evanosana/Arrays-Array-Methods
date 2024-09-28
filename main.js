@@ -5,6 +5,8 @@ const joinButton = document.getElementById("four")
 const concatButton = document.getElementById("five")
 const numCheck = document.getElementById("numCheck")
 const resetButton = document.getElementById("reset")
+let inputVar = document.getElementById("inputVar")
+let inputSep = document.getElementById("inputSep")
 
 let nums = [4, 3, 7, 10]
 console.log(nums)
@@ -22,7 +24,7 @@ resetButton.addEventListener("click", () => {
 
 
 pushButton.addEventListener("click", () => {
-    push(9)
+    push(Number(inputVar.value))
 })
 function push(newNum){
     let newArray = []
@@ -82,7 +84,7 @@ function join(){
             newJoin += nums[i]
         }
         else{
-            newJoin += nums[i] + "/"
+            newJoin += nums[i] + inputSep.value
         }
     }
     console.log(newJoin)
